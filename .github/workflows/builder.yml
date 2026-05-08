@@ -15,17 +15,17 @@ jobs:
       contents: read
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Login to GHCR
-        uses: docker/login-action@v3
+        uses: docker/login-action@v4
         with:
           registry: ghcr.io
           username: mimzyfang
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and Push
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v7
         with:
           context: .
           push: true        
