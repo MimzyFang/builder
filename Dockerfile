@@ -1,5 +1,5 @@
 # Base image with Node 20 on Debian Trixie
-FROM node:20-trixie
+FROM node:lts-trixie
 
 # Avoid interactive prompts during build
 ENV DEBIAN_FRONTEND=noninteractive
